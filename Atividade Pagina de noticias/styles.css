@@ -2,14 +2,14 @@
 
 /* 1. Reset Básico e Propriedades Globais */
 :root {
-  --primary-color: #333;
-  --secondary-color: #555;
-  --accent-color: #007bff;
-  --background-color: #f4f4f4;
-  --light-gray: #eee;
-  --dark-gray: #222;
-  --white-text: #fff;
-  --font-family: 'Arial', sans-serif;
+  --primary-color: #2c3e50; /* Cor primária mais suave */
+  --secondary-color: #34495e; /* Cor secundária mais clara */
+  --accent-color: #e74c3c; /* Cor de destaque mais vibrante */
+  --background-color: #ecf0f1; /* Cor de fundo mais clara */
+  --light-gray: #bdc3c7; /* Cinza claro */
+  --dark-gray: #2c3e50; /* Cinza escuro */
+  --white-text: #ffffff; /* Texto branco */
+  --font-family: 'Roboto', sans-serif; /* Fonte moderna */
   --transition-speed: 0.3s;
 }
 
@@ -30,15 +30,16 @@ body {
 header {
   background: var(--dark-gray);
   color: var(--white-text);
-  padding: 2rem 0;
+  padding: 3rem 0; /* Aumentado para mais espaço */
   text-align: center;
   border-bottom: 5px solid var(--accent-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 3em; /* Aumentado para destaque */
   margin: 0;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px; /* Aumentado para um toque moderno */
 }
 
 /* 3. Navegação */
@@ -46,7 +47,7 @@ nav {
   background: var(--secondary-color);
   color: var(--white-text);
   text-align: center;
-  padding: 1rem 0;
+  padding: 1.5rem 0; /* Aumentado para mais espaço */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -55,6 +56,7 @@ nav a {
   text-decoration: none;
   padding: 0.8rem 1.5rem;
   display: inline-block;
+  border-radius: 5px; /* Bordas arredondadas */
   transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
@@ -76,7 +78,7 @@ main {
 .main-news {
   background: var(--white-text);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 15px; /* Bordas mais arredondadas */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -88,7 +90,7 @@ main {
   height: auto;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
 .main-news-content h2 {
@@ -112,7 +114,7 @@ main {
 .news-item {
   background: var(--white-text);
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 15px; /* Bordas mais arredondadas */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -128,7 +130,7 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px; /* Bordas arredondadas */
   margin-bottom: 1rem;
 }
 
@@ -183,4 +185,26 @@ footer {
     grid-column: 2 / 3;
     grid-template-columns: 1fr;
   }
+}
+
+/* 7. Melhorias Adicionais */
+button {
+  background-color: var(--accent-color);
+  color: var(--white-text);
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+button:hover {
+  background-color: #c0392b; /* Cor de fundo mais escura ao passar o mouse */
+  transform: scale(1.05);
+}
+
+a.button {
+  display: inline-block;
+  text-align: center;
+  margin-top: 1rem;
 }

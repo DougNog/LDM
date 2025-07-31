@@ -1,0 +1,186 @@
+/* styles.css */
+
+/* 1. Reset Básico e Propriedades Globais */
+:root {
+  --primary-color: #333;
+  --secondary-color: #555;
+  --accent-color: #007bff;
+  --background-color: #f4f4f4;
+  --light-gray: #eee;
+  --dark-gray: #222;
+  --white-text: #fff;
+  --font-family: 'Arial', sans-serif;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  color: var(--primary-color);
+  background: var(--background-color);
+}
+
+/* 2. Cabeçalho */
+header {
+  background: var(--dark-gray);
+  color: var(--white-text);
+  padding: 2rem 0;
+  text-align: center;
+  border-bottom: 5px solid var(--accent-color);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+/* 3. Navegação */
+nav {
+  background: var(--secondary-color);
+  color: var(--white-text);
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  color: var(--white-text);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+  transform: scale(1.05);
+}
+
+/* 4. Conteúdo Principal */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.main-news {
+  background: var(--white-text);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-news img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.main-news-content h2 {
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.main-news-content p {
+  font-size: 1.1em;
+  color: var(--secondary-color);
+}
+
+/* Lista de Notícias (Menores) */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.news-item {
+  background: var(--white-text);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.news-item-content h3 {
+  font-size: 1.5em;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.news-item-content p {
+  font-size: 0.95em;
+  color: var(--secondary-color);
+}
+
+/* 5. Rodapé */
+footer {
+  background: var(--dark-gray);
+  color: var(--white-text);
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
+  font-size: 0.9em;
+}
+
+/* 6. Responsividade */
+@media (min-width: 768px) {
+  .main-news {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .main-news img {
+    width: 40%;
+    margin-right: 2rem;
+  }
+
+  .main-news-content {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .main-news {
+    grid-column: 1 / 2;
+  }
+
+  .news-list {
+    grid-column: 2 / 3;
+    grid-template-columns: 1fr;
+  }
+}

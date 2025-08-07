@@ -1,0 +1,244 @@
+/* Configurações Gerais */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.6;
+
+    margin: 0;
+
+    padding: 0;
+
+    color: #333;
+
+    background-color: #f4f4f4;
+
+}
+ 
+/* Cabeçalho e Navegação */
+
+header {
+
+    background: #004466; /* Um tom de azul corporativo */
+
+    color: #fff;
+
+    padding: 1rem 0;
+
+    text-align: center;
+
+}
+ 
+header h1 {
+
+    margin: 0;
+
+}
+ 
+nav ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin-top: 10px;
+
+}
+ 
+nav ul li {
+
+    display: inline;
+
+    margin: 0 15px;
+
+}
+ 
+nav ul li a {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+ 
+/* Conteúdo Principal */
+
+main {
+
+    padding: 20px;
+
+    max-width: 800px;
+
+    margin: 20px auto;
+
+    background: #fff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    border-radius: 8px;
+
+}
+ 
+section {
+
+    margin-bottom: 25px;
+
+}
+ 
+h2 {
+
+    color: #004466;
+
+    border-bottom: 2px solid #f4f4f4;
+
+    padding-bottom: 10px;
+
+}
+ 
+/* Imagem de Perfil */
+
+.perfil {
+
+    display: block;
+
+    margin: 20px auto;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%; /* Deixa a imagem redonda */
+
+    border: 3px solid #004466;
+
+}
+ 
+/* Listas */
+
+ul {
+
+    list-style: none;
+
+    padding: 0;
+
+}
+ 
+section#hobbies ul li, section#links ul li {
+
+    background: #f9f9f9;
+
+    margin: 5px 0;
+
+    padding: 10px;
+
+    border-left: 5px solid #004466;
+
+}
+ 
+/* Tabela */
+
+.data-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+
+}
+ 
+.data-table th, .data-table td {
+
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    text-align: left;
+
+}
+ 
+.data-table th {
+
+    background-color: #004466;
+
+    color: white;
+
+}
+ 
+.data-table tr:nth-child(even) {
+
+    background-color: #f2f2f2;
+
+}
+ 
+/* Formulário de Contato */
+
+form label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+}
+ 
+form input, form textarea {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 4px;
+
+}
+ 
+form button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    background: #004466;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+
+}
+ 
+form button:hover {
+
+    background: #005580;
+
+}
+ 
+/* Rodapé */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px 0;
+
+    background: #333;
+
+    color: #fff;
+
+    margin-top: 20px;
+
+}
+ 

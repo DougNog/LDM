@@ -100,23 +100,25 @@ h2 {
  
 /* Imagem de Perfil */
 
+/* ...existing code... */
 .perfil {
-
     display: block;
-
     margin: 20px auto;
-
     width: 150px;
-
     height: 150px;
-
-    border-radius: 50%; /* Deixa a imagem redonda */
-
+    object-fit: cover;      /* Garante que a imagem preencha o círculo sem distorcer */
+    border-radius: 50%;     /* Deixa a imagem redonda */
     border: 3px solid #004466;
-
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra suave */
+    background-color: #fff; /* Fundo branco caso a imagem tenha transparência */
 }
- 
-/* Listas */
+
+@media (max-width: 500px) {
+    .perfil {
+        width: 100px;
+        height: 100px;
+    }
+}
 
 ul {
 

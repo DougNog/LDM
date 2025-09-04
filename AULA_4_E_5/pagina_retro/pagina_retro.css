@@ -1,0 +1,105 @@
+
+/* Importação das fontes */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'VT323', monospace;
+    background-color: #222;
+    color: #eee;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.main-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    margin-bottom: 20px;
+}
+
+.main-header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    color: #00ff00; /* Verde neon */
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 1em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.card {
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    color: #ffff00; /* Amarelo neon */
+    margin-bottom: 8px;
+}
+
+.card .year {
+    font-size: 0.9em;
+    color: #00ffff; /* Ciano neon */
+    margin-bottom: 5px;
+}
+
+.card .description {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.media-preview {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333;
+    border-top: 1px solid #555;
+    font-size: 0.8em;
+    color: #aaa;
+}

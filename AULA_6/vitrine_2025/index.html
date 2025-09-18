@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="index.css"/>
+  <title>Vitrine 2025: Moda, Essência e Estilo em Alta Definição</title>
+</head>
+<body>
+
+  <header class="topo">
+    <h1>Vitrine 2025</h1>
+    <p>Moda, essência e estilo em alta definição.</p>
+    <nav class="menu">Início | Produtos | Carrinho | Contato</nav>
+  </header>
+
+  <section class="carrossel" aria-label="Galeria de destaques">
+
+    <input type="radio" name="c" id="c1" checked>
+    <input type="radio" name="c" id="c2">
+    <input type="radio" name="c" id="c3">
+
+    <div class="track">
+      <figure class="slide">
+        <img src="img/Slim_Fit.jpg" >
+        <figcaption>Camisa Slim Fit</figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="img/Perfume.jpg" alt="Essência Gold">
+        <figcaption>Essência Gold</figcaption>
+      </figure>
+      <figure class="slide">
+        <img src="img/Bolsa.jpg" alt="Bolsa de Couro">
+        <figcaption>Bolsa de Couro</figcaption>
+      </figure>
+    </div>
+
+
+    <div class="dots">
+      <label for="c1" aria-label="Slide 1"></label>
+      <label for="c2" aria-label="Slide 2"></label>
+      <label for="c3" aria-label="Slide 3"></label>
+    </div>
+
+
+    <div class="arrows" aria-hidden="true">
+      <!-- quando c1 ativo -->
+      <label class="prev s1" for="c3">&#10094;</label>
+      <label class="next s1" for="c2">&#10095;</label>
+      <!-- quando c2 ativo -->
+      <label class="prev s2" for="c1">&#10094;</label>
+      <label class="next s2" for="c3">&#10095;</label>
+      <!-- quando c3 ativo -->
+      <label class="prev s3" for="c2">&#10094;</label>
+      <label class="next s3" for="c1">&#10095;</label>
+    </div>
+  </section>
+
+  <main class="conteudo">
+    <section class="lista-produtos">
+      <h2>Produtos</h2>
+
+      <article class="produto">
+        <img src="img/Slim_Fit.jpg" alt="Camisa Slim Fit">
+        <div>
+          <h3>Camisa Slim Fit</h3>
+          <p>Categoria: Roupas</p>
+          <p>Preço: <strong>R$ 120,00</strong></p>
+          <p>Camisa elegante e confortável.</p>
+        </div>
+      </article>
+
+      <article class="produto">
+        <img src="img/Perfume.jpg" alt="Essência Gold">
+        <div>
+          <h3>Essência Gold</h3>
+          <p>Categoria: Perfumes</p>
+          <p>Preço: <strong>R$ 250,00</strong></p>
+          <p>Fragrância sofisticada.</p>
+        </div>
+      </article>
+
+      <article class="produto">
+        <img src="img/bolsa.jpg" alt="Bolsa de Couro">
+        <div>
+          <h3>Bolsa de Couro</h3>
+          <p>Categoria: Acessórios</p>
+          <p>Preço: <strong>R$ 350,00</strong></p>
+          <p>Design moderno e resistente.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>&copy; 2025 Vitrine 2025</p>
+    <p>Instagram | Facebook | Twitter</p>
+    <p>Assine nossa newsletter</p>
+  </footer>
+
+</body>
+</html>

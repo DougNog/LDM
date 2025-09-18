@@ -1,0 +1,150 @@
+* { box-sizing: border-box; }
+:root {
+  --bg: peachpuff;
+  --cinza: #d3d3d3;
+  --borda: #000;
+  --card: #fff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  margin: 0;
+  color: #222;
+}
+
+/* Topo */
+.topo {
+  background: var(--cinza);
+  text-align: center;
+  padding: 12px 10px;
+}
+.menu { margin-top: 6px; }
+
+/* ===== Carrossel ===== */
+.carrossel {
+  position: relative;
+  max-width: 640px; 
+  width: 92%;
+  margin: 24px auto 10px;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  background: var(--card);
+}
+
+.carrossel input { display: none; }
+
+/* faixa de slides */
+.track {
+  display: flex;
+  width: 300%;               /* 3 slides */
+  transition: transform .5s ease;
+}
+
+.slide { flex: 0 0 100%; margin: 0; text-align: center; }
+.slide img {
+  display: block;
+  box-sizing: border-box;
+  width: 200px;
+  height: 320px;             /* ajuste se quiser */
+  object-fit: cover;
+}
+.slide figcaption {
+  font-size: .9rem;
+  padding: 6px 8px 10px;
+}
+
+/* movimento via radios */
+#c1:checked ~ .track { transform: translateX(0%); }
+#c2:checked ~ .track { transform: translateX(-100%); }
+#c3:checked ~ .track { transform: translateX(-200%); }
+
+/* dots */
+.dots {
+  text-align: center;
+  padding: 8px 0 12px;
+}
+.dots label {
+  display: inline-block;
+  width: 12px; height: 12px;
+  background: #8c8c8c;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#c1:checked ~ .dots label[for="c1"],
+#c2:checked ~ .dots label[for="c2"],
+#c3:checked ~ .dots label[for="c3"] { background: #000; }
+
+/* setas (mostram só a dupla do slide ativo) */
+.arrows label {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 2rem;
+  color: #fff;
+  background: rgba(0,0,0,.45);
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+.arrows .prev { left: 10px; }
+.arrows .next { right: 10px; }
+
+#c1:checked ~ .arrows .s1,
+#c2:checked ~ .arrows .s2,
+#c3:checked ~ .arrows .s3 { display: block; }
+
+/* ===== Produtos ===== */
+.conteudo { padding: 6px 0 24px; }
+
+.lista-produtos {
+  max-width: 960px;
+  width: 92%;
+  margin: 0 auto;
+}
+.lista-produtos h2 { text-align: center; margin: 18px 0; }
+
+.produto {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px; 
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 700px;
+}
+.produto img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  background: var(--cinza);
+  text-align: center;
+  padding: 14px 10px;
+}
+
+/* Responsivo */
+@media (max-width: 520px) {
+  .slide img { height: 220px; }
+  .produto {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .produto img {
+    height: 160px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

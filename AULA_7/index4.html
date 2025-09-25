@@ -5,80 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap</title>
 
-  <!--* Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link 
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
     rel="stylesheet"
   >
 
-  <!--* Bootstrap Icons -->
+  <!-- Bootstrap Icons -->
   <link 
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
   >
 </head>
 <body>
-  <!-- *Navbar -->
-  <div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Perguntas</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
-      </ul>
-    </header>
-  </div>
-
-  <!-- *Hero Section -->
-  <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold text-body-emphasis">Centered screenshot</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">
-        Quickly design and customize responsive mobile-first sites with Bootstrap, 
-        the world’s most popular front-end open source toolkit, featuring Sass 
-        variables and mixins, responsive grid system, extensive prebuilt components, 
-        and powerful JavaScript plugins.
-      </p>
-      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-      </div>
+  <!-- Cabeçalho -->
+  <header class="bg-dark text-white p-3">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <h1 class="h3 mb-0">Meu Site Bootstrap</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Sobre</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Contato</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="overflow-hidden" style="max-height: 30vh;">
-      <div class="container px-5">
-        <img 
-          src="bootstrap-docs.png" 
-          class="img-fluid border rounded-3 shadow-lg mb-4" 
-          alt="Example image" 
-          width="700" 
-          height="500" 
-          loading="lazy"
-        >
-      </div>
-    </div>
-  </div>
+  <!-- Body -->
+  <main class="container my-5 text-center">
+    <h2 class="mb-4">Bem-vindo ao meu site!</h2>
+    <p class="lead">Este é um exemplo simples usando Bootstrap com cabeçalho, conteúdo principal e rodapé.</p>
 
-  <!-- *Footer -->
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-body-secondary">© 2025 Company, Inc</p>
-
-    <a 
-      href="/" 
-      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none"
-      aria-label="Bootstrap"
+    <!-- Imagem -->
+    <img 
+      src="/AULA_7/IMG/win_fundo.webp" 
+      alt="Imagem exemplo" 
+      class="img-fluid rounded shadow"
     >
-      <i class="bi bi-bootstrap-fill fs-2"></i>
-    </a>
+  </main>
 
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-    </ul>
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-4 border-top border-3 border-primary">
+    <div class="container">
+      <div class="d-flex flex-column align-items-center">
+        <i class="bi bi-bootstrap-fill fs-2 mb-2 text-primary"></i>
+        <p class="mb-1">© 2025 Meu Site - Todos os direitos reservados</p>
+        <small class="text-secondary">Desenvolvido com Bootstrap</small>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
